@@ -12,7 +12,6 @@ pexpect:
 * http://www.pythonforbeginners.com/systems-programming/how-to-use-the-pexpect-module-in-python
 * http://pexpect.sourceforge.net/pexpect.html#-run
 * http://pexpect.readthedocs.org/en/latest/install.html
-
 * Expect scripts: http://en.wikipedia.org/wiki/Expect
 
 As well, the basic python information on: modules, files, stdin/stdout, print, variable types, comments, and sys
