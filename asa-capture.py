@@ -13,10 +13,10 @@ import argparse	#parsing command line arguments
 #os.system('cls' if os.name == 'nt' else 'clear')
 
 parser = argparse.ArgumentParser(description='Get "show version" from a Cisco ASA.')
-parser.add_argument('-u', '--user', default='cisco', help='user name to login with (default=cisco)')
+parser.add_argument('-u', '--user',     default='cisco', help='user name to login with (default=cisco)')
 parser.add_argument('-p', '--password', default='cisco', help='password to login with (default=cisco)')
-parser.add_argument('-e', '--enable', default='cisco', help='password for enable (default=cisco)')
-parser.add_argument('-d', '--device', default='192.168.120.160', help='device to login to (default=192.168.120.160)')
+parser.add_argument('-e', '--enable',   default='cisco', help='password for enable (default=cisco)')
+parser.add_argument('-d', '--device',   default='192.168.120.160', help='device to login to (default=192.168.120.160)')
 args = parser.parse_args()
 
 #child becomes the object to send/receive commands from the ASA
@@ -58,7 +58,7 @@ child.expect('.*#.*')
 child.sendline('terminal pager 0')
 
 #setting a new file for output so we can write output from the screen to a file for later
-fout = file('test.log','w')
+fout = file(args.device+'.log','w')
 child.expect('.*#.*')
 
 #setting the show version output to a file
